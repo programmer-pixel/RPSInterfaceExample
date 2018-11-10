@@ -1,14 +1,16 @@
+import javax.swing.*;
+
 public class RunMe {
 	private static final int TOTAL_GAMES = 1000;
 
 	public static void main(String[] args) {
-		RPS game = new RPS(); 							// create the game object
+		RPS game = new RPS(); 								// create the game object
 
-		Player p1 = new WeightedRandomPlayer(.7, .2); 	// create two players
-		Player p2 = new BeatLastMovePlayer();
+		AlwaysRockPlayer p1 = new AlwaysRockPlayer();
+		RandomPlayer p2 = new RandomPlayer();
 
-		for (int i = 0; i < TOTAL_GAMES; i++) { 	// play many games together
-			int p1move = p1.getMove(); 				// get the moves from the players
+		for (int i = 0; i < TOTAL_GAMES; i++) { 			// play many games together
+			int p1move = p1.getMove(); 						// get the moves from the players
 			int p2move = p2.getMove();
 
 			int winner = game.playRound(p1move, p2move); // play the round
@@ -19,12 +21,8 @@ public class RunMe {
 					+ game.getP2Percent() + "%): " + RPS.intToString(p2move)
 					+ "\tWinner: " + RPS.getWinnerString(winner));
 
-			p1.updateLastRoundInfo(p1move, p2move, RPS.getWinnerFor(1, winner)); // update
-																		// the
-																		// players
-																		// with
-																		// the
-																		// results
+			// Update both players with this round's info
+			p1.updateLastRoundInfo(p1move, p2move, RPS.getWinnerFor(1, winner));
 			p2.updateLastRoundInfo(p2move, p1move, RPS.getWinnerFor(2, winner));
 		}
 

@@ -5,14 +5,13 @@
  * @author David
  *
  */
-public class BeatLastMovePlayer implements Player {
+public class BeatLastMovePlayer {
 	int opponentLastMove;
 	
 	public BeatLastMovePlayer() {
 		opponentLastMove = RPS.ROCK;		// we'll start by trying to beat rock
 	}
-	
-	@Override
+
 	public int getMove() {
 		return getMoveToBeat(opponentLastMove);
 	}
@@ -23,7 +22,6 @@ public class BeatLastMovePlayer implements Player {
 		return RPS.SCISSORS;
 	}
 
-	@Override
 	public void updateLastRoundInfo(int yourMove, int opponentMove, int outcome) {
 		opponentLastMove = opponentMove;
 	}

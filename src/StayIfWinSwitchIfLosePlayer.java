@@ -5,19 +5,17 @@
  * @author David
  *
  */
-public class StayIfWinSwitchIfLosePlayer implements Player {
+public class StayIfWinSwitchIfLosePlayer {
 	int prevMove;
 	
 	public StayIfWinSwitchIfLosePlayer() {
 		prevMove = RPS.ROCK;
 	}
-	
-	@Override
+
 	public int getMove() {
 		return prevMove;
 	}
 
-	@Override
 	public void updateLastRoundInfo(int yourMove, int opponentMove, int outcome) {
 		if (outcome == RPS.OPPONENT) {
 			prevMove = getMoveToBeat(opponentMove);

@@ -1,14 +1,13 @@
 import java.util.Scanner;
 
 
-public class HumanPlayer implements Player {
+public class HumanPlayer {
 	private static Scanner keyboard;
 	
 	public HumanPlayer() {
 		keyboard = new Scanner(System.in);
 	}
-	
-	@Override
+
 	public int getMove() {
 		System.out.print("Type r/p/s: ");
 		String c = keyboard.next();
@@ -18,7 +17,6 @@ public class HumanPlayer implements Player {
 		return RPS.SCISSORS;
 	}
 
-	@Override
 	public void updateLastRoundInfo(int yourMove, int opponentMove, int outcome) {
 		System.out.print("\n Winner:\t");
 		if (outcome == RPS.TIE) 		System.out.println("tie"); 
