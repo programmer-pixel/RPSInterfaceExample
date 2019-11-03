@@ -1,4 +1,4 @@
-public class RandomPlayer {
+public class RandomPlayer implements Player {
 
     public int getMove() {
         int num = (int)(Math.random()*3);

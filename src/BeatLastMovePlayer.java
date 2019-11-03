@@ -5,7 +5,7 @@
  * @author David
  *
  */
-public class BeatLastMovePlayer {
+public class BeatLastMovePlayer implements Player {
 	int opponentLastMove;
 	
 	public BeatLastMovePlayer() {

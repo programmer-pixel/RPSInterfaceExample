@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class HumanPlayer {
+public class HumanPlayer implements Player {
 	private static Scanner keyboard;
 	
 	public HumanPlayer() {

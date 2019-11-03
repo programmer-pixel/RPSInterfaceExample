@@ -4,7 +4,7 @@
  * @author David
  *
  */
-public class AlwaysRockPlayer {
+public class AlwaysRockPlayer implements Player {
 
 	public AlwaysRockPlayer() {
 		

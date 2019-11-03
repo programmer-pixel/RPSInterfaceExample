@@ -5,7 +5,7 @@
  * @author David
  *
  */
-public class StayIfWinSwitchIfLosePlayer {
+public class StayIfWinSwitchIfLosePlayer implements Player {
 	int prevMove;
 	
 	public StayIfWinSwitchIfLosePlayer() {
