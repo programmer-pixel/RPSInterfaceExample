@@ -19,8 +19,8 @@ public class HumanPlayer implements Player {
 
 	public void updateLastRoundInfo(int yourMove, int opponentMove, int outcome) {
 		System.out.print("\n Winner:\t");
-		if (outcome == RPS.TIE) 		System.out.println("tie"); 
-		if (outcome == RPS.YOU) 		System.out.println("you"); 
-		if (outcome == RPS.OPPONENT)	System.out.println("opponent"); 
+		if (outcome == RPS.TIE) 		System.out.println("tie");
+		if (outcome == RPS.P1) 		System.out.println("you");
+		if (outcome == RPS.P2)	System.out.println("opponent");
 	}
 }

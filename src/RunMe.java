@@ -1,5 +1,8 @@
 import javax.swing.*;
 
+/***
+ * This class runs 1000 games between two classes that implement Player and displays the results.
+ */
 public class RunMe {
 	private static final int TOTAL_GAMES = 1000;
 
