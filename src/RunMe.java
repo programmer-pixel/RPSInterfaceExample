@@ -1,16 +1,13 @@
 import javax.swing.*;
 
-/***
- * This class runs 1000 games between two classes that implement Player and displays the results.
- */
 public class RunMe {
 	private static final int TOTAL_GAMES = 1000;
 
 	public static void main(String[] args) {
 		RPS game = new RPS(); 								// create the game object
 
-		Player p1 = new AlwaysRockPlayer();
-		Player p2 = new RandomPlayer();
+		Player p1 = new RandomPlayer();
+		Player p2 = new GuessNextMovePlayer();
 
 		for (int i = 0; i < TOTAL_GAMES; i++) { 			// play many games together
 			int p1move = p1.getMove(); 						// get the moves from the players

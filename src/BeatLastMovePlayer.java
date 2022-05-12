@@ -9,7 +9,7 @@ public class BeatLastMovePlayer implements Player {
 	int opponentLastMove;
 	
 	public BeatLastMovePlayer() {
-		opponentLastMove = RPS.ROCK;		// we'll start by trying to beat rock
+		opponentLastMove = RPS.ROCK;	// we'll start by trying to beat rock
 	}
 
 	public int getMove() {
@@ -24,6 +24,7 @@ public class BeatLastMovePlayer implements Player {
 
 	public void updateLastRoundInfo(int yourMove, int opponentMove, int outcome) {
 		opponentLastMove = opponentMove;
+
 	}
 
 }
